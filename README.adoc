@@ -1,7 +1,16 @@
 = ROCK64 Caddy Config
+:Asciidoctor_: https://asciidoctor.org/[Asciidoctor]
 :Caddy: https://caddyserver.com/[Caddy]
 :Grafana: https://grafana.com/[Grafana]
+:fish: https://fishshell.com/[fish]
+:Git: https://git-scm.com/[Git]
+:Linux: https://www.linuxfoundation.org/[Linux]
+:Podman: https://podman.io/[Podman]
+:pre-commit: https://pre-commit.com/[pre-commit]
 :Prometheus: https://prometheus.io/[Prometheus]
+:Python: https://www.python.org/[Python]
+:Rouge: https://rouge.jneen.net/[Rouge]
+:Ruby: https://www.ruby-lang.org/en/[Ruby]
 
 {Caddy} configuration file for services on running on my PINE64 ROCK64 SBC.
 
@@ -17,6 +26,55 @@ Follow the instructions for the https://github.com/jwillikers/caddy-cloudflare-i
 * {Prometheus}
 
 == Develop
+
+. Install toolbox.
++
+[source,sh]
+----
+sudo rpm-ostree install toolbox
+----
+
+. Reboot.
++
+[source,sh]
+----
+sudo systemctl reboot
+----
+
+. Create a toolbox container.
++
+[source,sh]
+----
+toolbox create
+----
+
+. Install the necessary dependencies in the toolbox.
++
+[source,sh]
+----
+toolbox run sudo dnf -y install git pre-commit
+----
+
+. Clone the repository.
++
+[source,sh]
+----
+toolbox run git ~/Projects clone git@github.com:jwillikers/rock64-caddy-config.git
+----
+
+. Change into the project directory.
++
+[source,sh]
+----
+cd rock64-caddy-config
+----
+
+. Install pre-commit's Git hooks.
++
+[source,sh]
+----
+toolbox run pre-commit install
+----
 
 . Format the Caddyfile.
 +
@@ -41,3 +99,40 @@ podman run \
   --volume $PWD/Caddyfile:/srv/Caddyfile:Z \
   quay.io/jwillikers/caddy-cloudflare:latest caddy validate
 ----
+
+== Contributing
+
+Contributions in the form of issues, feedback, and even pull requests are welcome.
+Make sure to adhere to the project's link:CODE_OF_CONDUCT.adoc[Code of Conduct].
+
+== Open Source Software
+
+This project is built on the hard work of countless open source contributors.
+Several of these projects are enumerated below.
+
+* {Asciidoctor_}
+* {Caddy}
+* {fish}
+* {Git}
+* {Grafana}
+* {Linux}
+* {Podman}
+* {pre-commit}
+* {Prometheus}
+* {Python}
+* {Rouge}
+* {Ruby}
+
+== Code of Conduct
+
+Refer to the project's link:CODE_OF_CONDUCT.adoc[Code of Conduct] for details.
+
+== License
+
+This repository is licensed under the https://www.gnu.org/licenses/gpl-3.0.html[GPLv3], a copy of which is provided in the link:LICENSE.adoc[license file].
+
+© 2022 Jordan Williams
+
+== Authors
+
+mailto:{email}[{author}]

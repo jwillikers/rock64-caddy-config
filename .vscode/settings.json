@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "aarch",
+        "Asciidoctor",
         "buildah",
         "Caddyfile",
         "Containerfile",
@@ -13,6 +14,7 @@
         "jwillikers",
         "miniflux",
         "mosquitto",
+        "ostree",
         "podman",
         "syncthing",
         "unifi"
