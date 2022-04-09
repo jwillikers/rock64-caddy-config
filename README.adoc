@@ -26,10 +26,6 @@ The instructions for building will assume that you are on Fedora.
 
 == Usage
 
-Follow the instructions for setting up and running the https://github.com/jwillikers/caddy-cloudflare-image[Caddy Cloudflare Image] using the Caddyfile provided in this repository.
-
-== Develop
-
 . Install toolbox.
 +
 [source,sh]
@@ -55,7 +51,7 @@ toolbox create
 +
 [source,sh]
 ----
-toolbox run sudo dnf -y install git pre-commit
+toolbox run sudo dnf -y install git
 ----
 
 . Clone the repository.
@@ -70,6 +66,17 @@ toolbox run git ~/Projects clone git@github.com:jwillikers/rock64-caddy-config.g
 [source,sh]
 ----
 cd rock64-caddy-config
+----
+
+. Follow the instructions for setting up and running the https://github.com/jwillikers/caddy-cloudflare-image[Caddy Cloudflare Image] using the Caddyfile provided in this repository.
+
+== Develop
+
+. Install the pre-commit in the toolbox.
++
+[source,sh]
+----
+toolbox run sudo dnf -y install pre-commit
 ----
 
 . Install pre-commit's Git hooks.
