@@ -23,7 +23,7 @@ endif::[]
 :Rouge: https://rouge.jneen.net/[Rouge]
 :Ruby: https://www.ruby-lang.org/en/[Ruby]
 
-image:https://github.com/jwillikers/rock64-caddy-config/actions/workflows/ci.yml/badge.svg[GitHub Workflow Status]
+image:https://github.com/jwillikers/rock64-caddy-config/workflows/CI/badge.svg["Build Status", link="https://github.com/jwillikers/rock64-caddy-config/actions?query=workflow%3ACI"]
 image:https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white[pre-commit, link=https://github.com/pre-commit/pre-commit]
 
 {Caddy} configuration file for services on running on my PINE64 ROCK64 SBC.
