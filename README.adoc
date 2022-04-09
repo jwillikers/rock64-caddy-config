@@ -3,6 +3,7 @@
 :Caddy: https://caddyserver.com/[Caddy]
 :Grafana: https://grafana.com/[Grafana]
 :fish: https://fishshell.com/[fish]
+:Fedora-IoT: https://getfedora.org/en/iot/[Fedora IoT]
 :Git: https://git-scm.com/[Git]
 :Linux: https://www.linuxfoundation.org/[Linux]
 :Podman: https://podman.io/[Podman]
@@ -14,16 +15,18 @@
 
 {Caddy} configuration file for services on running on my PINE64 ROCK64 SBC.
 
-== Getting Started
+== Synopsis
 
-These instructions are for using this Caddyfile and Caddy container using rootless Podman on Fedora IoT.
+These instructions are for using this Caddyfile and Caddy container using rootless {Podman} on {Fedora-IoT}.
 The instructions for building will assume that you are on Fedora.
-
-Follow the instructions for the https://github.com/jwillikers/caddy-cloudflare-image[Caddy Cloudflare Image] using the Caddyfile provided here.
 
 .Services
 * {Grafana}
 * {Prometheus}
+
+== Usage
+
+Follow the instructions for setting up and running the https://github.com/jwillikers/caddy-cloudflare-image[Caddy Cloudflare Image] using the Caddyfile provided in this repository.
 
 == Develop
 
@@ -112,6 +115,7 @@ Several of these projects are enumerated below.
 
 * {Asciidoctor_}
 * {Caddy}
+* {Fedora-IoT}
 * {fish}
 * {Git}
 * {Grafana}
