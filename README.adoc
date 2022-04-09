@@ -1,4 +1,14 @@
 = ROCK64 Caddy Config
+Jordan Williams <jordan@jwillikers.com>
+:experimental:
+:icons: font
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
 :Asciidoctor_: https://asciidoctor.org/[Asciidoctor]
 :Caddy: https://caddyserver.com/[Caddy]
 :Grafana: https://grafana.com/[Grafana]
