@@ -10,6 +10,7 @@
         "gitea",
         "Grafana",
         "hadolint",
+        "ifdef",
         "jellyfin",
         "jwillikers",
         "miniflux",
