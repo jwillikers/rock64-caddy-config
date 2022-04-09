@@ -71,7 +71,7 @@ toolbox run sudo dnf -y install git
 +
 [source,sh]
 ----
-toolbox run git ~/Projects clone git@github.com:jwillikers/rock64-caddy-config.git
+toolbox run git clone git@github.com:jwillikers/rock64-caddy-config.git
 ----
 
 . Change into the project directory.
