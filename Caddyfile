@@ -1,0 +1,14 @@
+{
+	email jordan@jwillikers.io
+	acme_dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+	# For testing
+	# acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
+}
+
+prometheus.jwillikers.io, prometheus.lan.jwillikers.io {
+    reverse_proxy prometheus.dns.podman:9090
+}
+
+grafana.jwillikers.io, grafana.lan.jwillikers.io {
+    reverse_proxy grafana.dns.podman:3000
+}

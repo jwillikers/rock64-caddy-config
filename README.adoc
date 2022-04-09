@@ -1,0 +1,43 @@
+= ROCK64 Caddy Config
+:Caddy: https://caddyserver.com/[Caddy]
+:Grafana: https://grafana.com/[Grafana]
+:Prometheus: https://prometheus.io/[Prometheus]
+
+{Caddy} configuration file for services on running on my PINE64 ROCK64 SBC.
+
+== Getting Started
+
+These instructions are for using this Caddyfile and Caddy container using rootless Podman on Fedora IoT.
+The instructions for building will assume that you are on Fedora.
+
+Follow the instructions for the https://github.com/jwillikers/caddy-cloudflare-image[Caddy Cloudflare Image] using the Caddyfile provided here.
+
+.Services
+* {Grafana}
+* {Prometheus}
+
+== Develop
+
+. Format the Caddyfile.
++
+[source,sh]
+----
+podman run \
+  -it \
+  --name caddy-fmt \
+  --rm \
+  --volume $PWD/Caddyfile:/srv/Caddyfile:Z \
+  docker.io/caddy:latest caddy fmt --overwrite
+----
+
+. Validate the Caddyfile.
++
+[source,sh]
+----
+podman run \
+  -it \
+  --name caddy-validate \
+  --rm \
+  --volume $PWD/Caddyfile:/srv/Caddyfile:Z \
+  quay.io/jwillikers/caddy-cloudflare:latest caddy validate
+----
